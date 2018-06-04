@@ -1,0 +1,8 @@
+run_erl [58675] Sun Jun  3 10:57:28 2018
+Args before exec of shell:
+run_erl [58675] Sun Jun  3 10:57:28 2018
+argv[0] = sh
+run_erl [58675] Sun Jun  3 10:57:28 2018
+argv[1] = -c
+run_erl [58675] Sun Jun  3 10:57:28 2018
+argv[2] = exec /home/wwd/work/mongodbdriver/rel/mongodbdriver/bin/mongodbdriver console '' 

@@ -1,0 +1,669 @@
+2018-06-02 06:32:37.950 [info] <0.1261.0> Application lager started on node 'mongodbdriver@127.0.0.1'
+2018-06-02 06:33:06.129 [info] <0.1261.0> Application lager started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 07:17:57.734 [info] <0.1261.0> Application lager started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 07:47:10.542 [info] <0.1261.0> Application asn1 started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 07:47:10.542 [info] <0.1261.0> Application public_key started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 07:47:10.543 [info] <0.1261.0> Application ssl started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 07:47:10.543 [error] <0.1372.0>@ssl:connect:116 CRASH REPORT Process <0.1372.0> with 1 neighbours crashed with reason: no function clause matching ssl:connect(<<"127.0.0.1">>, <<"30000">>, [binary,{active,true},{packet,raw}], <<"78903432">>) line 116
+2018-06-03 07:47:44.230 [error] <0.1390.0>@inet:start_timer:1732 CRASH REPORT Process <0.1390.0> with 1 neighbours crashed with reason: bad argument in call to erlang:start_timer(<<"78903432">>, <0.1390.0>, inet) in inet:start_timer/1 line 1732
+2018-06-03 07:49:12.999 [error] <0.1395.0>@gen_tcp:connect:149 CRASH REPORT Process <0.1395.0> with 1 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 149
+2018-06-03 08:12:33.922 [error] <0.1412.0>@gen_tcp:connect:149 CRASH REPORT Process <0.1412.0> with 1 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 149
+2018-06-03 09:41:57.860 [error] <0.1493.0> gen_server <0.1493.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,37,66,26,169,24,115,0,0,18>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]}
+2018-06-03 09:41:57.861 [error] <0.1493.0> CRASH REPORT Process <0.1493.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,37,66,26,169,24,115,0,0,18>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]} in gen_server:terminate/7 line 812
+2018-06-03 09:43:12.815 [error] <0.1500.0> gen_server <0.1500.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,112,66,26,169,24,115,0,0,19>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]}
+2018-06-03 09:43:12.816 [error] <0.1500.0> CRASH REPORT Process <0.1500.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,112,66,26,169,24,115,0,0,19>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]} in gen_server:terminate/7 line 812
+2018-06-03 09:44:14.876 [error] <0.1512.0> gen_server <0.1512.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,174,66,26,169,24,115,0,0,21>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,...},...]}
+2018-06-03 09:44:14.876 [error] <0.1512.0> CRASH REPORT Process <0.1512.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,240,174,66,26,169,24,115,0,0,21>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,...},...]} in gen_server:terminate/7 line 812
+2018-06-03 09:59:37.796 [error] <0.1530.0> gen_server <0.1530.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,244,73,66,26,169,24,115,0,0,22>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]}
+2018-06-03 09:59:37.796 [error] <0.1530.0> CRASH REPORT Process <0.1530.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => {<<91,19,244,73,66,26,169,24,115,0,0,22>>},<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:03:06.893 [error] <0.1543.0> gen_server <0.1543.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => <<"1234">>,<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,[{file,...},...]},...]}
+2018-06-03 10:03:06.893 [error] <0.1543.0> CRASH REPORT Process <0.1543.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => <<"1234">>,<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,[{file,...},...]},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:30:18.939 [error] <0.1588.0> gen_server <0.1588.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{'_id' => 'Yank',<<"_id">> => {<<91,19,251,122,66,26,169,24,115,0,0,23>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,...},...]}
+2018-06-03 10:30:18.939 [error] <0.1588.0> CRASH REPORT Process <0.1588.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{'_id' => 'Yank',<<"_id">> => {<<91,19,251,122,66,26,169,24,115,0,0,23>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,...},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:31:31.399 [error] <0.1593.0> gen_server <0.1593.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{name => 'Yank',<<"_id">> => {<<91,19,251,195,66,26,169,24,115,0,0,24>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,...},...]}
+2018-06-03 10:31:31.399 [error] <0.1593.0> CRASH REPORT Process <0.1593.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{name => 'Yank',<<"_id">> => {<<91,19,251,195,66,26,169,24,115,0,0,24>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,...},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:42:57.667 [error] <0.1609.0> gen_server <0.1609.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{'_id' => fds,name => 'Yank',<<"_id">> => {<<91,19,254,113,66,26,169,24,115,0,0,26>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]}
+2018-06-03 10:42:57.667 [error] <0.1609.0> CRASH REPORT Process <0.1609.0> with 1 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{'_id' => fds,name => 'Yank',<<"_id">> => {<<91,19,254,113,66,26,169,24,115,0,0,26>>}}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,...}]},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:50:53.660 [info] <0.1261.0> Application lager started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 10:53:25.905 [error] <0.1359.0>@gen_tcp:connect:149 CRASH REPORT Process <0.1359.0> with 1 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 149
+2018-06-03 10:54:50.993 [error] <0.1367.0> gen_server <0.1367.0> terminated with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => <<"1234">>,<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,[{file,...},...]},...]}
+2018-06-03 10:54:50.994 [error] <0.1367.0> CRASH REPORT Process <0.1367.0> with 2 neighbours exited with reason: {bad_bson,[{bson_binary,put_field,[<<"0">>,#{<<"_id">> => <<"1234">>,<<"name">> => <<"Yankees">>}],[{file,"src/bson_binary.erl"},{line,40}]},{bson_binary,put_value_accum,2,[{file,"src/bson_binary.erl"},{line,115}]},{lists,foldl,3,[{file,"lists.erl"},{line,1263}]},{bson_binary,put_array,1,[{file,"src/bson_binary.erl"},{line,112}]},{bson_binary,put_field,2,[{file,"src/bson_binary.erl"},{line,34}]},{bson_binary,put_field_accum,3,[{file,"src/bson_binary.erl"},{line,96}]},{bson,doc_foldlN,5,[{file,...},...]},...]} in gen_server:terminate/7 line 812
+2018-06-03 10:57:30.830 [info] <0.1247.0> Application lager started on node 'mongodbdriver@127.0.0.1'
+2018-06-03 11:58:46.211 [error] <0.1392.0> gen_server <0.1392.0> terminated with reason: killed
+2018-06-03 11:58:46.211 [error] <0.1392.0> CRASH REPORT Process <0.1392.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.216 [error] <0.1406.0> gen_server <0.1406.0> terminated with reason: killed
+2018-06-03 11:58:46.216 [error] <0.1406.0> CRASH REPORT Process <0.1406.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.218 [error] <0.1413.0> gen_server <0.1413.0> terminated with reason: killed
+2018-06-03 11:58:46.218 [error] <0.1413.0> CRASH REPORT Process <0.1413.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.218 [error] <0.1390.0>@mc_topology:parse_ismaster:204 gen_server <0.1390.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 11:58:46.218 [error] <0.1390.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1390.0> with 2 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.218 [error] <0.1416.0> gen_server <0.1416.0> terminated with reason: killed
+2018-06-03 11:58:46.219 [error] <0.1416.0> CRASH REPORT Process <0.1416.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.219 [error] <0.1398.0>@mc_topology:parse_ismaster:204 gen_server <0.1398.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 11:58:46.219 [error] <0.1398.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1398.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.219 [error] <0.1396.0>@mc_topology:parse_ismaster:204 gen_server <0.1396.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 11:58:46.219 [error] <0.1396.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1396.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.220 [error] <0.1401.0>@mc_topology:parse_ismaster:204 gen_server <0.1401.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 11:58:46.220 [error] <0.1401.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1401.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 11:58:46.220 [error] <0.1389.0>@mc_topology:parse_ismaster:204 gen_server mc_pool_sup terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 11:58:46.220 [error] <0.1389.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.857 [error] <0.1423.0> gen_server <0.1423.0> terminated with reason: killed
+2018-06-03 12:00:33.857 [error] <0.1423.0> CRASH REPORT Process <0.1423.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.885 [error] <0.1443.0> gen_server <0.1443.0> terminated with reason: killed
+2018-06-03 12:00:33.886 [error] <0.1443.0> CRASH REPORT Process <0.1443.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.887 [error] <0.1437.0> gen_server <0.1437.0> terminated with reason: killed
+2018-06-03 12:00:33.887 [error] <0.1437.0> CRASH REPORT Process <0.1437.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.887 [error] <0.1421.0>@mc_topology:parse_ismaster:204 gen_server <0.1421.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.887 [error] <0.1421.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1421.0> with 1 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.888 [error] <0.1430.0>@mc_topology:parse_ismaster:204 gen_server <0.1430.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.888 [error] <0.1427.0>@mc_topology:parse_ismaster:204 gen_server <0.1427.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.888 [error] <0.1427.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1427.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.888 [error] <0.1430.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1430.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.888 [error] <0.1446.0>@mc_topology:parse_ismaster:204 gen_server <0.1446.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.888 [error] <0.1446.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1446.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.888 [error] <0.1432.0>@mc_topology:parse_ismaster:204 gen_server <0.1432.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.889 [error] <0.1432.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.1432.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:33.889 [error] <0.1420.0>@mc_topology:parse_ismaster:204 gen_server mc_pool_sup terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:00:33.889 [error] <0.1420.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.737 [error] <0.1453.0> gen_server <0.1453.0> terminated with reason: killed
+2018-06-03 12:00:42.737 [error] <0.1453.0> CRASH REPORT Process <0.1453.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.742 [error] <0.1467.0> gen_server <0.1467.0> terminated with reason: killed
+2018-06-03 12:00:42.742 [error] <0.1467.0> CRASH REPORT Process <0.1467.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.744 [error] <0.1474.0> gen_server <0.1474.0> terminated with reason: killed
+2018-06-03 12:00:42.744 [error] <0.1474.0> CRASH REPORT Process <0.1474.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.746 [error] <0.1478.0> gen_server <0.1478.0> terminated with reason: killed
+2018-06-03 12:00:42.746 [error] <0.1478.0> CRASH REPORT Process <0.1478.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.747 [error] <0.1482.0> gen_server <0.1482.0> terminated with reason: killed
+2018-06-03 12:00:42.747 [error] <0.1482.0> CRASH REPORT Process <0.1482.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.749 [error] <0.1486.0> gen_server <0.1486.0> terminated with reason: killed
+2018-06-03 12:00:42.749 [error] <0.1486.0> CRASH REPORT Process <0.1486.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.752 [error] <0.1490.0> gen_server <0.1490.0> terminated with reason: killed
+2018-06-03 12:00:42.752 [error] <0.1490.0> CRASH REPORT Process <0.1490.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.754 [error] <0.1494.0> gen_server <0.1494.0> terminated with reason: killed
+2018-06-03 12:00:42.754 [error] <0.1494.0> CRASH REPORT Process <0.1494.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.757 [error] <0.1498.0> gen_server <0.1498.0> terminated with reason: killed
+2018-06-03 12:00:42.757 [error] <0.1498.0> CRASH REPORT Process <0.1498.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.759 [error] <0.1502.0> gen_server <0.1502.0> terminated with reason: killed
+2018-06-03 12:00:42.759 [error] <0.1502.0> CRASH REPORT Process <0.1502.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.761 [error] <0.1506.0> gen_server <0.1506.0> terminated with reason: killed
+2018-06-03 12:00:42.761 [error] <0.1506.0> CRASH REPORT Process <0.1506.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.762 [error] <0.1510.0> gen_server <0.1510.0> terminated with reason: killed
+2018-06-03 12:00:42.763 [error] <0.1510.0> CRASH REPORT Process <0.1510.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.776 [error] <0.1514.0> gen_server <0.1514.0> terminated with reason: killed
+2018-06-03 12:00:42.776 [error] <0.1514.0> CRASH REPORT Process <0.1514.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.778 [error] <0.1518.0> gen_server <0.1518.0> terminated with reason: killed
+2018-06-03 12:00:42.778 [error] <0.1518.0> CRASH REPORT Process <0.1518.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.780 [error] <0.1522.0> gen_server <0.1522.0> terminated with reason: killed
+2018-06-03 12:00:42.780 [error] <0.1522.0> CRASH REPORT Process <0.1522.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.782 [error] <0.1526.0> gen_server <0.1526.0> terminated with reason: killed
+2018-06-03 12:00:42.782 [error] <0.1526.0> CRASH REPORT Process <0.1526.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.797 [error] <0.1530.0> gen_server <0.1530.0> terminated with reason: killed
+2018-06-03 12:00:42.797 [error] <0.1530.0> CRASH REPORT Process <0.1530.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.800 [error] <0.1534.0> gen_server <0.1534.0> terminated with reason: killed
+2018-06-03 12:00:42.879 [error] <0.1534.0> CRASH REPORT Process <0.1534.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.879 [error] <0.1538.0> gen_server <0.1538.0> terminated with reason: killed
+2018-06-03 12:00:42.879 [error] <0.1538.0> CRASH REPORT Process <0.1538.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.879 [error] <0.1542.0> gen_server <0.1542.0> terminated with reason: killed
+2018-06-03 12:00:42.879 [error] <0.1542.0> CRASH REPORT Process <0.1542.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.879 [error] <0.1546.0> gen_server <0.1546.0> terminated with reason: killed
+2018-06-03 12:00:42.879 [error] <0.1546.0> CRASH REPORT Process <0.1546.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.879 [error] <0.1550.0> gen_server <0.1550.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1550.0> CRASH REPORT Process <0.1550.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1554.0> gen_server <0.1554.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1554.0> CRASH REPORT Process <0.1554.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1558.0> gen_server <0.1558.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1558.0> CRASH REPORT Process <0.1558.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1562.0> gen_server <0.1562.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1562.0> CRASH REPORT Process <0.1562.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1566.0> gen_server <0.1566.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1566.0> CRASH REPORT Process <0.1566.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1570.0> gen_server <0.1570.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1570.0> CRASH REPORT Process <0.1570.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1574.0> gen_server <0.1574.0> terminated with reason: killed
+2018-06-03 12:00:42.880 [error] <0.1574.0> CRASH REPORT Process <0.1574.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:42.880 [error] <0.1578.0> gen_server <0.1578.0> terminated with reason: killed
+2018-06-03 12:00:43.000 [warning] <0.1246.0> lager_error_logger_h dropped 36 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:43.000 [error] <0.1670.0> gen_server <0.1670.0> terminated with reason: killed
+2018-06-03 12:00:43.000 [error] <0.1670.0> CRASH REPORT Process <0.1670.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.008 [error] <0.1674.0> gen_server <0.1674.0> terminated with reason: killed
+2018-06-03 12:00:43.009 [error] <0.1674.0> CRASH REPORT Process <0.1674.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.014 [error] <0.1678.0> gen_server <0.1678.0> terminated with reason: killed
+2018-06-03 12:00:43.014 [error] <0.1678.0> CRASH REPORT Process <0.1678.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.022 [error] <0.1682.0> gen_server <0.1682.0> terminated with reason: killed
+2018-06-03 12:00:43.022 [error] <0.1682.0> CRASH REPORT Process <0.1682.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.025 [error] <0.1686.0> gen_server <0.1686.0> terminated with reason: killed
+2018-06-03 12:00:43.025 [error] <0.1686.0> CRASH REPORT Process <0.1686.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.027 [error] <0.1690.0> gen_server <0.1690.0> terminated with reason: killed
+2018-06-03 12:00:43.027 [error] <0.1690.0> CRASH REPORT Process <0.1690.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.031 [error] <0.1694.0> gen_server <0.1694.0> terminated with reason: killed
+2018-06-03 12:00:43.031 [error] <0.1694.0> CRASH REPORT Process <0.1694.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.053 [error] <0.1698.0> gen_server <0.1698.0> terminated with reason: killed
+2018-06-03 12:00:43.053 [error] <0.1698.0> CRASH REPORT Process <0.1698.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.060 [error] <0.1702.0> gen_server <0.1702.0> terminated with reason: killed
+2018-06-03 12:00:43.060 [error] <0.1702.0> CRASH REPORT Process <0.1702.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.063 [error] <0.1706.0> gen_server <0.1706.0> terminated with reason: killed
+2018-06-03 12:00:43.155 [error] <0.1706.0> CRASH REPORT Process <0.1706.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.155 [error] <0.1710.0> gen_server <0.1710.0> terminated with reason: killed
+2018-06-03 12:00:43.155 [error] <0.1710.0> CRASH REPORT Process <0.1710.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.155 [error] <0.1714.0> gen_server <0.1714.0> terminated with reason: killed
+2018-06-03 12:00:43.155 [error] <0.1714.0> CRASH REPORT Process <0.1714.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.155 [error] <0.1718.0> gen_server <0.1718.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1718.0> CRASH REPORT Process <0.1718.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1722.0> gen_server <0.1722.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1722.0> CRASH REPORT Process <0.1722.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1726.0> gen_server <0.1726.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1726.0> CRASH REPORT Process <0.1726.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1730.0> gen_server <0.1730.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1730.0> CRASH REPORT Process <0.1730.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1734.0> gen_server <0.1734.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1734.0> CRASH REPORT Process <0.1734.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1738.0> gen_server <0.1738.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1738.0> CRASH REPORT Process <0.1738.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1742.0> gen_server <0.1742.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1742.0> CRASH REPORT Process <0.1742.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.156 [error] <0.1746.0> gen_server <0.1746.0> terminated with reason: killed
+2018-06-03 12:00:43.156 [error] <0.1746.0> CRASH REPORT Process <0.1746.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.157 [error] <0.1750.0> gen_server <0.1750.0> terminated with reason: killed
+2018-06-03 12:00:43.157 [error] <0.1750.0> CRASH REPORT Process <0.1750.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.157 [error] <0.1754.0> gen_server <0.1754.0> terminated with reason: killed
+2018-06-03 12:00:43.157 [error] <0.1754.0> CRASH REPORT Process <0.1754.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.157 [error] <0.1758.0> gen_server <0.1758.0> terminated with reason: killed
+2018-06-03 12:00:43.157 [error] <0.1758.0> CRASH REPORT Process <0.1758.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.157 [error] <0.1762.0> gen_server <0.1762.0> terminated with reason: killed
+2018-06-03 12:00:43.157 [error] <0.1762.0> CRASH REPORT Process <0.1762.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:43.157 [error] <0.1766.0> gen_server <0.1766.0> terminated with reason: killed
+2018-06-03 12:00:43.157 [error] <0.1766.0> CRASH REPORT Process <0.1766.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.006 [warning] <0.1246.0> lager_error_logger_h dropped 773 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:44.007 [error] <0.4870.0> gen_server <0.4870.0> terminated with reason: killed
+2018-06-03 12:00:44.007 [error] <0.4870.0> CRASH REPORT Process <0.4870.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.012 [error] <0.4874.0> gen_server <0.4874.0> terminated with reason: killed
+2018-06-03 12:00:44.012 [error] <0.4874.0> CRASH REPORT Process <0.4874.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.015 [error] <0.4878.0> gen_server <0.4878.0> terminated with reason: killed
+2018-06-03 12:00:44.015 [error] <0.4878.0> CRASH REPORT Process <0.4878.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.017 [error] <0.4882.0> gen_server <0.4882.0> terminated with reason: killed
+2018-06-03 12:00:44.018 [error] <0.4882.0> CRASH REPORT Process <0.4882.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.028 [error] <0.4886.0> gen_server <0.4886.0> terminated with reason: killed
+2018-06-03 12:00:44.028 [error] <0.4886.0> CRASH REPORT Process <0.4886.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.032 [error] <0.4890.0> gen_server <0.4890.0> terminated with reason: killed
+2018-06-03 12:00:44.032 [error] <0.4890.0> CRASH REPORT Process <0.4890.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.036 [error] <0.4894.0> gen_server <0.4894.0> terminated with reason: killed
+2018-06-03 12:00:44.036 [error] <0.4894.0> CRASH REPORT Process <0.4894.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.039 [error] <0.4898.0> gen_server <0.4898.0> terminated with reason: killed
+2018-06-03 12:00:44.039 [error] <0.4898.0> CRASH REPORT Process <0.4898.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.043 [error] <0.4902.0> gen_server <0.4902.0> terminated with reason: killed
+2018-06-03 12:00:44.044 [error] <0.4902.0> CRASH REPORT Process <0.4902.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.054 [error] <0.4906.0> gen_server <0.4906.0> terminated with reason: killed
+2018-06-03 12:00:44.054 [error] <0.4906.0> CRASH REPORT Process <0.4906.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.058 [error] <0.4910.0> gen_server <0.4910.0> terminated with reason: killed
+2018-06-03 12:00:44.058 [error] <0.4910.0> CRASH REPORT Process <0.4910.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.062 [error] <0.4914.0> gen_server <0.4914.0> terminated with reason: killed
+2018-06-03 12:00:44.062 [error] <0.4914.0> CRASH REPORT Process <0.4914.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.066 [error] <0.4918.0> gen_server <0.4918.0> terminated with reason: killed
+2018-06-03 12:00:44.066 [error] <0.4918.0> CRASH REPORT Process <0.4918.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.068 [error] <0.4922.0> gen_server <0.4922.0> terminated with reason: killed
+2018-06-03 12:00:44.068 [error] <0.4922.0> CRASH REPORT Process <0.4922.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.070 [error] <0.4926.0> gen_server <0.4926.0> terminated with reason: killed
+2018-06-03 12:00:44.070 [error] <0.4926.0> CRASH REPORT Process <0.4926.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.086 [error] <0.4930.0> gen_server <0.4930.0> terminated with reason: killed
+2018-06-03 12:00:44.086 [error] <0.4930.0> CRASH REPORT Process <0.4930.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.092 [error] <0.4934.0> gen_server <0.4934.0> terminated with reason: killed
+2018-06-03 12:00:44.092 [error] <0.4934.0> CRASH REPORT Process <0.4934.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.094 [error] <0.4938.0> gen_server <0.4938.0> terminated with reason: killed
+2018-06-03 12:00:44.094 [error] <0.4938.0> CRASH REPORT Process <0.4938.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.095 [error] <0.4942.0> gen_server <0.4942.0> terminated with reason: killed
+2018-06-03 12:00:44.096 [error] <0.4942.0> CRASH REPORT Process <0.4942.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.098 [error] <0.4946.0> gen_server <0.4946.0> terminated with reason: killed
+2018-06-03 12:00:44.098 [error] <0.4946.0> CRASH REPORT Process <0.4946.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.103 [error] <0.4950.0> gen_server <0.4950.0> terminated with reason: killed
+2018-06-03 12:00:44.103 [error] <0.4950.0> CRASH REPORT Process <0.4950.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.113 [error] <0.4954.0> gen_server <0.4954.0> terminated with reason: killed
+2018-06-03 12:00:44.247 [error] <0.4954.0> CRASH REPORT Process <0.4954.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.247 [error] <0.4958.0> gen_server <0.4958.0> terminated with reason: killed
+2018-06-03 12:00:44.247 [error] <0.4958.0> CRASH REPORT Process <0.4958.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.247 [error] <0.4962.0> gen_server <0.4962.0> terminated with reason: killed
+2018-06-03 12:00:44.247 [error] <0.4962.0> CRASH REPORT Process <0.4962.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:44.248 [error] <0.4966.0> gen_server <0.4966.0> terminated with reason: killed
+2018-06-03 12:00:44.248 [error] <0.4966.0> CRASH REPORT Process <0.4966.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.003 [warning] <0.1246.0> lager_error_logger_h dropped 718 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:45.003 [error] <0.7710.0> gen_server <0.7710.0> terminated with reason: killed
+2018-06-03 12:00:45.003 [error] <0.7710.0> CRASH REPORT Process <0.7710.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.006 [error] <0.7714.0> gen_server <0.7714.0> terminated with reason: killed
+2018-06-03 12:00:45.006 [error] <0.7714.0> CRASH REPORT Process <0.7714.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.008 [error] <0.7718.0> gen_server <0.7718.0> terminated with reason: killed
+2018-06-03 12:00:45.008 [error] <0.7718.0> CRASH REPORT Process <0.7718.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.011 [error] <0.7722.0> gen_server <0.7722.0> terminated with reason: killed
+2018-06-03 12:00:45.011 [error] <0.7722.0> CRASH REPORT Process <0.7722.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.013 [error] <0.7726.0> gen_server <0.7726.0> terminated with reason: killed
+2018-06-03 12:00:45.013 [error] <0.7726.0> CRASH REPORT Process <0.7726.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.016 [error] <0.7730.0> gen_server <0.7730.0> terminated with reason: killed
+2018-06-03 12:00:45.016 [error] <0.7730.0> CRASH REPORT Process <0.7730.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.017 [error] <0.7734.0> gen_server <0.7734.0> terminated with reason: killed
+2018-06-03 12:00:45.017 [error] <0.7734.0> CRASH REPORT Process <0.7734.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.033 [error] <0.7738.0> gen_server <0.7738.0> terminated with reason: killed
+2018-06-03 12:00:45.033 [error] <0.7738.0> CRASH REPORT Process <0.7738.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.036 [error] <0.7742.0> gen_server <0.7742.0> terminated with reason: killed
+2018-06-03 12:00:45.036 [error] <0.7742.0> CRASH REPORT Process <0.7742.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.039 [error] <0.7746.0> gen_server <0.7746.0> terminated with reason: killed
+2018-06-03 12:00:45.039 [error] <0.7746.0> CRASH REPORT Process <0.7746.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.042 [error] <0.7750.0> gen_server <0.7750.0> terminated with reason: killed
+2018-06-03 12:00:45.042 [error] <0.7750.0> CRASH REPORT Process <0.7750.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.044 [error] <0.7754.0> gen_server <0.7754.0> terminated with reason: killed
+2018-06-03 12:00:45.044 [error] <0.7754.0> CRASH REPORT Process <0.7754.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.046 [error] <0.7758.0> gen_server <0.7758.0> terminated with reason: killed
+2018-06-03 12:00:45.046 [error] <0.7758.0> CRASH REPORT Process <0.7758.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.048 [error] <0.7762.0> gen_server <0.7762.0> terminated with reason: killed
+2018-06-03 12:00:45.048 [error] <0.7762.0> CRASH REPORT Process <0.7762.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.052 [error] <0.7766.0> gen_server <0.7766.0> terminated with reason: killed
+2018-06-03 12:00:45.052 [error] <0.7766.0> CRASH REPORT Process <0.7766.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.057 [error] <0.7770.0> gen_server <0.7770.0> terminated with reason: killed
+2018-06-03 12:00:45.058 [error] <0.7770.0> CRASH REPORT Process <0.7770.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.060 [error] <0.7774.0> gen_server <0.7774.0> terminated with reason: killed
+2018-06-03 12:00:45.060 [error] <0.7774.0> CRASH REPORT Process <0.7774.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.063 [error] <0.7778.0> gen_server <0.7778.0> terminated with reason: killed
+2018-06-03 12:00:45.063 [error] <0.7778.0> CRASH REPORT Process <0.7778.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.065 [error] <0.7782.0> gen_server <0.7782.0> terminated with reason: killed
+2018-06-03 12:00:45.065 [error] <0.7782.0> CRASH REPORT Process <0.7782.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.066 [error] <0.7786.0> gen_server <0.7786.0> terminated with reason: killed
+2018-06-03 12:00:45.235 [error] <0.7786.0> CRASH REPORT Process <0.7786.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.235 [error] <0.7790.0> gen_server <0.7790.0> terminated with reason: killed
+2018-06-03 12:00:45.236 [error] <0.7790.0> CRASH REPORT Process <0.7790.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.236 [error] <0.7794.0> gen_server <0.7794.0> terminated with reason: killed
+2018-06-03 12:00:45.236 [error] <0.7794.0> CRASH REPORT Process <0.7794.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.236 [error] <0.7798.0> gen_server <0.7798.0> terminated with reason: killed
+2018-06-03 12:00:45.236 [error] <0.7798.0> CRASH REPORT Process <0.7798.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.236 [error] <0.7802.0> gen_server <0.7802.0> terminated with reason: killed
+2018-06-03 12:00:45.236 [error] <0.7802.0> CRASH REPORT Process <0.7802.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:45.236 [error] <0.7806.0> gen_server <0.7806.0> terminated with reason: killed
+2018-06-03 12:00:45.237 [error] <0.7806.0> CRASH REPORT Process <0.7806.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.003 [warning] <0.1246.0> lager_error_logger_h dropped 736 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:46.004 [error] <0.10614.0> gen_server <0.10614.0> terminated with reason: killed
+2018-06-03 12:00:46.004 [error] <0.10614.0> CRASH REPORT Process <0.10614.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.007 [error] <0.10618.0> gen_server <0.10618.0> terminated with reason: killed
+2018-06-03 12:00:46.007 [error] <0.10618.0> CRASH REPORT Process <0.10618.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.008 [error] <0.10622.0> gen_server <0.10622.0> terminated with reason: killed
+2018-06-03 12:00:46.008 [error] <0.10622.0> CRASH REPORT Process <0.10622.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.012 [error] <0.10626.0> gen_server <0.10626.0> terminated with reason: killed
+2018-06-03 12:00:46.012 [error] <0.10626.0> CRASH REPORT Process <0.10626.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.014 [error] <0.10630.0> gen_server <0.10630.0> terminated with reason: killed
+2018-06-03 12:00:46.014 [error] <0.10630.0> CRASH REPORT Process <0.10630.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.016 [error] <0.10634.0> gen_server <0.10634.0> terminated with reason: killed
+2018-06-03 12:00:46.016 [error] <0.10634.0> CRASH REPORT Process <0.10634.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.020 [error] <0.10638.0> gen_server <0.10638.0> terminated with reason: killed
+2018-06-03 12:00:46.020 [error] <0.10638.0> CRASH REPORT Process <0.10638.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.023 [error] <0.10642.0> gen_server <0.10642.0> terminated with reason: killed
+2018-06-03 12:00:46.023 [error] <0.10642.0> CRASH REPORT Process <0.10642.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.026 [error] <0.10646.0> gen_server <0.10646.0> terminated with reason: killed
+2018-06-03 12:00:46.026 [error] <0.10646.0> CRASH REPORT Process <0.10646.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.028 [error] <0.10650.0> gen_server <0.10650.0> terminated with reason: killed
+2018-06-03 12:00:46.028 [error] <0.10650.0> CRASH REPORT Process <0.10650.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.031 [error] <0.10654.0> gen_server <0.10654.0> terminated with reason: killed
+2018-06-03 12:00:46.031 [error] <0.10654.0> CRASH REPORT Process <0.10654.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.034 [error] <0.10658.0> gen_server <0.10658.0> terminated with reason: killed
+2018-06-03 12:00:46.035 [error] <0.10658.0> CRASH REPORT Process <0.10658.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.037 [error] <0.10662.0> gen_server <0.10662.0> terminated with reason: killed
+2018-06-03 12:00:46.037 [error] <0.10662.0> CRASH REPORT Process <0.10662.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.039 [error] <0.10666.0> gen_server <0.10666.0> terminated with reason: killed
+2018-06-03 12:00:46.039 [error] <0.10666.0> CRASH REPORT Process <0.10666.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.041 [error] <0.10670.0> gen_server <0.10670.0> terminated with reason: killed
+2018-06-03 12:00:46.041 [error] <0.10670.0> CRASH REPORT Process <0.10670.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.043 [error] <0.10674.0> gen_server <0.10674.0> terminated with reason: killed
+2018-06-03 12:00:46.043 [error] <0.10674.0> CRASH REPORT Process <0.10674.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.049 [error] <0.10678.0> gen_server <0.10678.0> terminated with reason: killed
+2018-06-03 12:00:46.049 [error] <0.10678.0> CRASH REPORT Process <0.10678.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.053 [error] <0.10682.0> gen_server <0.10682.0> terminated with reason: killed
+2018-06-03 12:00:46.054 [error] <0.10682.0> CRASH REPORT Process <0.10682.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.057 [error] <0.10686.0> gen_server <0.10686.0> terminated with reason: killed
+2018-06-03 12:00:46.156 [error] <0.10686.0> CRASH REPORT Process <0.10686.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.156 [error] <0.10690.0> gen_server <0.10690.0> terminated with reason: killed
+2018-06-03 12:00:46.156 [error] <0.10690.0> CRASH REPORT Process <0.10690.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.157 [error] <0.10694.0> gen_server <0.10694.0> terminated with reason: killed
+2018-06-03 12:00:46.157 [error] <0.10694.0> CRASH REPORT Process <0.10694.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.157 [error] <0.10698.0> gen_server <0.10698.0> terminated with reason: killed
+2018-06-03 12:00:46.157 [error] <0.10698.0> CRASH REPORT Process <0.10698.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.157 [error] <0.10702.0> gen_server <0.10702.0> terminated with reason: killed
+2018-06-03 12:00:46.157 [error] <0.10702.0> CRASH REPORT Process <0.10702.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.157 [error] <0.10706.0> gen_server <0.10706.0> terminated with reason: killed
+2018-06-03 12:00:46.157 [error] <0.10706.0> CRASH REPORT Process <0.10706.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:46.157 [error] <0.10710.0> gen_server <0.10710.0> terminated with reason: killed
+2018-06-03 12:00:46.157 [error] <0.10710.0> CRASH REPORT Process <0.10710.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.000 [warning] <0.1246.0> lager_error_logger_h dropped 794 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:47.000 [error] <0.13818.0> gen_server <0.13818.0> terminated with reason: killed
+2018-06-03 12:00:47.000 [error] <0.13818.0> CRASH REPORT Process <0.13818.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.009 [error] <0.13822.0> gen_server <0.13822.0> terminated with reason: killed
+2018-06-03 12:00:47.009 [error] <0.13822.0> CRASH REPORT Process <0.13822.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.012 [error] <0.13826.0> gen_server <0.13826.0> terminated with reason: killed
+2018-06-03 12:00:47.013 [error] <0.13826.0> CRASH REPORT Process <0.13826.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.015 [error] <0.13830.0> gen_server <0.13830.0> terminated with reason: killed
+2018-06-03 12:00:47.015 [error] <0.13830.0> CRASH REPORT Process <0.13830.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.017 [error] <0.13834.0> gen_server <0.13834.0> terminated with reason: killed
+2018-06-03 12:00:47.017 [error] <0.13834.0> CRASH REPORT Process <0.13834.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.028 [error] <0.13838.0> gen_server <0.13838.0> terminated with reason: killed
+2018-06-03 12:00:47.028 [error] <0.13838.0> CRASH REPORT Process <0.13838.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.033 [error] <0.13842.0> gen_server <0.13842.0> terminated with reason: killed
+2018-06-03 12:00:47.033 [error] <0.13842.0> CRASH REPORT Process <0.13842.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.035 [error] <0.13846.0> gen_server <0.13846.0> terminated with reason: killed
+2018-06-03 12:00:47.035 [error] <0.13846.0> CRASH REPORT Process <0.13846.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.039 [error] <0.13850.0> gen_server <0.13850.0> terminated with reason: killed
+2018-06-03 12:00:47.039 [error] <0.13850.0> CRASH REPORT Process <0.13850.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.043 [error] <0.13854.0> gen_server <0.13854.0> terminated with reason: killed
+2018-06-03 12:00:47.043 [error] <0.13854.0> CRASH REPORT Process <0.13854.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.047 [error] <0.13858.0> gen_server <0.13858.0> terminated with reason: killed
+2018-06-03 12:00:47.047 [error] <0.13858.0> CRASH REPORT Process <0.13858.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.054 [error] <0.13862.0> gen_server <0.13862.0> terminated with reason: killed
+2018-06-03 12:00:47.054 [error] <0.13862.0> CRASH REPORT Process <0.13862.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.058 [error] <0.13866.0> gen_server <0.13866.0> terminated with reason: killed
+2018-06-03 12:00:47.058 [error] <0.13866.0> CRASH REPORT Process <0.13866.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.062 [error] <0.13870.0> gen_server <0.13870.0> terminated with reason: killed
+2018-06-03 12:00:47.062 [error] <0.13870.0> CRASH REPORT Process <0.13870.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.068 [error] <0.13874.0> gen_server <0.13874.0> terminated with reason: killed
+2018-06-03 12:00:47.068 [error] <0.13874.0> CRASH REPORT Process <0.13874.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.135 [error] <0.13878.0> gen_server <0.13878.0> terminated with reason: killed
+2018-06-03 12:00:47.135 [error] <0.13878.0> CRASH REPORT Process <0.13878.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.159 [error] <0.13882.0> gen_server <0.13882.0> terminated with reason: killed
+2018-06-03 12:00:47.159 [error] <0.13882.0> CRASH REPORT Process <0.13882.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.171 [error] <0.13886.0> gen_server <0.13886.0> terminated with reason: killed
+2018-06-03 12:00:47.171 [error] <0.13886.0> CRASH REPORT Process <0.13886.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.174 [error] <0.13890.0> gen_server <0.13890.0> terminated with reason: killed
+2018-06-03 12:00:47.174 [error] <0.13890.0> CRASH REPORT Process <0.13890.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.178 [error] <0.13894.0> gen_server <0.13894.0> terminated with reason: killed
+2018-06-03 12:00:47.178 [error] <0.13894.0> CRASH REPORT Process <0.13894.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.183 [error] <0.13898.0> gen_server <0.13898.0> terminated with reason: killed
+2018-06-03 12:00:47.184 [error] <0.13898.0> CRASH REPORT Process <0.13898.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.188 [error] <0.13902.0> gen_server <0.13902.0> terminated with reason: killed
+2018-06-03 12:00:47.188 [error] <0.13902.0> CRASH REPORT Process <0.13902.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.192 [error] <0.13906.0> gen_server <0.13906.0> terminated with reason: killed
+2018-06-03 12:00:47.192 [error] <0.13906.0> CRASH REPORT Process <0.13906.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.197 [error] <0.13910.0> gen_server <0.13910.0> terminated with reason: killed
+2018-06-03 12:00:47.197 [error] <0.13910.0> CRASH REPORT Process <0.13910.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:47.199 [error] <0.13914.0> gen_server <0.13914.0> terminated with reason: killed
+2018-06-03 12:00:47.199 [error] <0.13914.0> CRASH REPORT Process <0.13914.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.006 [warning] <0.1246.0> lager_error_logger_h dropped 613 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:48.006 [error] <0.16370.0> gen_server <0.16370.0> terminated with reason: killed
+2018-06-03 12:00:48.006 [error] <0.16370.0> CRASH REPORT Process <0.16370.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.009 [error] <0.16374.0> gen_server <0.16374.0> terminated with reason: killed
+2018-06-03 12:00:48.009 [error] <0.16374.0> CRASH REPORT Process <0.16374.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.011 [error] <0.16378.0> gen_server <0.16378.0> terminated with reason: killed
+2018-06-03 12:00:48.011 [error] <0.16378.0> CRASH REPORT Process <0.16378.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.014 [error] <0.16382.0> gen_server <0.16382.0> terminated with reason: killed
+2018-06-03 12:00:48.014 [error] <0.16382.0> CRASH REPORT Process <0.16382.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.017 [error] <0.16386.0> gen_server <0.16386.0> terminated with reason: killed
+2018-06-03 12:00:48.017 [error] <0.16386.0> CRASH REPORT Process <0.16386.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.019 [error] <0.16390.0> gen_server <0.16390.0> terminated with reason: killed
+2018-06-03 12:00:48.019 [error] <0.16390.0> CRASH REPORT Process <0.16390.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.021 [error] <0.16394.0> gen_server <0.16394.0> terminated with reason: killed
+2018-06-03 12:00:48.021 [error] <0.16394.0> CRASH REPORT Process <0.16394.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.027 [error] <0.16398.0> gen_server <0.16398.0> terminated with reason: killed
+2018-06-03 12:00:48.027 [error] <0.16398.0> CRASH REPORT Process <0.16398.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.032 [error] <0.16402.0> gen_server <0.16402.0> terminated with reason: killed
+2018-06-03 12:00:48.032 [error] <0.16402.0> CRASH REPORT Process <0.16402.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.035 [error] <0.16406.0> gen_server <0.16406.0> terminated with reason: killed
+2018-06-03 12:00:48.036 [error] <0.16406.0> CRASH REPORT Process <0.16406.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.038 [error] <0.16410.0> gen_server <0.16410.0> terminated with reason: killed
+2018-06-03 12:00:48.038 [error] <0.16410.0> CRASH REPORT Process <0.16410.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.042 [error] <0.16414.0> gen_server <0.16414.0> terminated with reason: killed
+2018-06-03 12:00:48.043 [error] <0.16414.0> CRASH REPORT Process <0.16414.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.046 [error] <0.16418.0> gen_server <0.16418.0> terminated with reason: killed
+2018-06-03 12:00:48.046 [error] <0.16418.0> CRASH REPORT Process <0.16418.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.050 [error] <0.16422.0> gen_server <0.16422.0> terminated with reason: killed
+2018-06-03 12:00:48.050 [error] <0.16422.0> CRASH REPORT Process <0.16422.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.057 [error] <0.16426.0> gen_server <0.16426.0> terminated with reason: killed
+2018-06-03 12:00:48.058 [error] <0.16426.0> CRASH REPORT Process <0.16426.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.061 [error] <0.16430.0> gen_server <0.16430.0> terminated with reason: killed
+2018-06-03 12:00:48.061 [error] <0.16430.0> CRASH REPORT Process <0.16430.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.063 [error] <0.16434.0> gen_server <0.16434.0> terminated with reason: killed
+2018-06-03 12:00:48.063 [error] <0.16434.0> CRASH REPORT Process <0.16434.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.065 [error] <0.16438.0> gen_server <0.16438.0> terminated with reason: killed
+2018-06-03 12:00:48.135 [error] <0.16438.0> CRASH REPORT Process <0.16438.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.135 [error] <0.16442.0> gen_server <0.16442.0> terminated with reason: killed
+2018-06-03 12:00:48.136 [error] <0.16442.0> CRASH REPORT Process <0.16442.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.136 [error] <0.16446.0> gen_server <0.16446.0> terminated with reason: killed
+2018-06-03 12:00:48.136 [error] <0.16446.0> CRASH REPORT Process <0.16446.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.136 [error] <0.16450.0> gen_server <0.16450.0> terminated with reason: killed
+2018-06-03 12:00:48.136 [error] <0.16450.0> CRASH REPORT Process <0.16450.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.136 [error] <0.16454.0> gen_server <0.16454.0> terminated with reason: killed
+2018-06-03 12:00:48.137 [error] <0.16454.0> CRASH REPORT Process <0.16454.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.137 [error] <0.16458.0> gen_server <0.16458.0> terminated with reason: killed
+2018-06-03 12:00:48.137 [error] <0.16458.0> CRASH REPORT Process <0.16458.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.137 [error] <0.16462.0> gen_server <0.16462.0> terminated with reason: killed
+2018-06-03 12:00:48.137 [error] <0.16462.0> CRASH REPORT Process <0.16462.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:48.137 [error] <0.16466.0> gen_server <0.16466.0> terminated with reason: killed
+2018-06-03 12:00:48.137 [error] <0.16466.0> CRASH REPORT Process <0.16466.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.004 [warning] <0.1246.0> lager_error_logger_h dropped 729 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:49.004 [error] <0.19354.0> gen_server <0.19354.0> terminated with reason: killed
+2018-06-03 12:00:49.004 [error] <0.19354.0> CRASH REPORT Process <0.19354.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.008 [error] <0.19358.0> gen_server <0.19358.0> terminated with reason: killed
+2018-06-03 12:00:49.008 [error] <0.19358.0> CRASH REPORT Process <0.19358.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.011 [error] <0.19362.0> gen_server <0.19362.0> terminated with reason: killed
+2018-06-03 12:00:49.011 [error] <0.19362.0> CRASH REPORT Process <0.19362.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.024 [error] <0.19366.0> gen_server <0.19366.0> terminated with reason: killed
+2018-06-03 12:00:49.024 [error] <0.19366.0> CRASH REPORT Process <0.19366.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.026 [error] <0.19370.0> gen_server <0.19370.0> terminated with reason: killed
+2018-06-03 12:00:49.026 [error] <0.19370.0> CRASH REPORT Process <0.19370.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.029 [error] <0.19374.0> gen_server <0.19374.0> terminated with reason: killed
+2018-06-03 12:00:49.029 [error] <0.19374.0> CRASH REPORT Process <0.19374.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.034 [error] <0.19378.0> gen_server <0.19378.0> terminated with reason: killed
+2018-06-03 12:00:49.034 [error] <0.19378.0> CRASH REPORT Process <0.19378.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.038 [error] <0.19382.0> gen_server <0.19382.0> terminated with reason: killed
+2018-06-03 12:00:49.038 [error] <0.19382.0> CRASH REPORT Process <0.19382.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.041 [error] <0.19386.0> gen_server <0.19386.0> terminated with reason: killed
+2018-06-03 12:00:49.041 [error] <0.19386.0> CRASH REPORT Process <0.19386.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.043 [error] <0.19390.0> gen_server <0.19390.0> terminated with reason: killed
+2018-06-03 12:00:49.043 [error] <0.19390.0> CRASH REPORT Process <0.19390.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.044 [error] <0.19394.0> gen_server <0.19394.0> terminated with reason: killed
+2018-06-03 12:00:49.044 [error] <0.19394.0> CRASH REPORT Process <0.19394.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.047 [error] <0.19398.0> gen_server <0.19398.0> terminated with reason: killed
+2018-06-03 12:00:49.047 [error] <0.19398.0> CRASH REPORT Process <0.19398.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.050 [error] <0.19402.0> gen_server <0.19402.0> terminated with reason: killed
+2018-06-03 12:00:49.050 [error] <0.19402.0> CRASH REPORT Process <0.19402.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.053 [error] <0.19406.0> gen_server <0.19406.0> terminated with reason: killed
+2018-06-03 12:00:49.053 [error] <0.19406.0> CRASH REPORT Process <0.19406.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.056 [error] <0.19410.0> gen_server <0.19410.0> terminated with reason: killed
+2018-06-03 12:00:49.056 [error] <0.19410.0> CRASH REPORT Process <0.19410.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.058 [error] <0.19414.0> gen_server <0.19414.0> terminated with reason: killed
+2018-06-03 12:00:49.058 [error] <0.19414.0> CRASH REPORT Process <0.19414.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.059 [error] <0.19418.0> gen_server <0.19418.0> terminated with reason: killed
+2018-06-03 12:00:49.150 [error] <0.19418.0> CRASH REPORT Process <0.19418.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.150 [error] <0.19422.0> gen_server <0.19422.0> terminated with reason: killed
+2018-06-03 12:00:49.151 [error] <0.19422.0> CRASH REPORT Process <0.19422.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.151 [error] <0.19426.0> gen_server <0.19426.0> terminated with reason: killed
+2018-06-03 12:00:49.151 [error] <0.19426.0> CRASH REPORT Process <0.19426.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.151 [error] <0.19430.0> gen_server <0.19430.0> terminated with reason: killed
+2018-06-03 12:00:49.151 [error] <0.19430.0> CRASH REPORT Process <0.19430.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.151 [error] <0.19434.0> gen_server <0.19434.0> terminated with reason: killed
+2018-06-03 12:00:49.151 [error] <0.19434.0> CRASH REPORT Process <0.19434.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.151 [error] <0.19438.0> gen_server <0.19438.0> terminated with reason: killed
+2018-06-03 12:00:49.152 [error] <0.19438.0> CRASH REPORT Process <0.19438.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.152 [error] <0.19442.0> gen_server <0.19442.0> terminated with reason: killed
+2018-06-03 12:00:49.152 [error] <0.19442.0> CRASH REPORT Process <0.19442.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.152 [error] <0.19446.0> gen_server <0.19446.0> terminated with reason: killed
+2018-06-03 12:00:49.152 [error] <0.19446.0> CRASH REPORT Process <0.19446.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:49.152 [error] <0.19450.0> gen_server <0.19450.0> terminated with reason: killed
+2018-06-03 12:00:49.152 [error] <0.19450.0> CRASH REPORT Process <0.19450.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.017 [warning] <0.1246.0> lager_error_logger_h dropped 601 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:50.017 [error] <0.21818.0> gen_server <0.21818.0> terminated with reason: killed
+2018-06-03 12:00:50.017 [error] <0.21818.0> CRASH REPORT Process <0.21818.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.022 [error] <0.21822.0> gen_server <0.21822.0> terminated with reason: killed
+2018-06-03 12:00:50.022 [error] <0.21822.0> CRASH REPORT Process <0.21822.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.026 [error] <0.21826.0> gen_server <0.21826.0> terminated with reason: killed
+2018-06-03 12:00:50.026 [error] <0.21826.0> CRASH REPORT Process <0.21826.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.030 [error] <0.21830.0> gen_server <0.21830.0> terminated with reason: killed
+2018-06-03 12:00:50.030 [error] <0.21830.0> CRASH REPORT Process <0.21830.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.032 [error] <0.21834.0> gen_server <0.21834.0> terminated with reason: killed
+2018-06-03 12:00:50.033 [error] <0.21834.0> CRASH REPORT Process <0.21834.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.034 [error] <0.21838.0> gen_server <0.21838.0> terminated with reason: killed
+2018-06-03 12:00:50.035 [error] <0.21838.0> CRASH REPORT Process <0.21838.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.037 [error] <0.21842.0> gen_server <0.21842.0> terminated with reason: killed
+2018-06-03 12:00:50.037 [error] <0.21842.0> CRASH REPORT Process <0.21842.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.039 [error] <0.21846.0> gen_server <0.21846.0> terminated with reason: killed
+2018-06-03 12:00:50.039 [error] <0.21846.0> CRASH REPORT Process <0.21846.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.042 [error] <0.21850.0> gen_server <0.21850.0> terminated with reason: killed
+2018-06-03 12:00:50.042 [error] <0.21850.0> CRASH REPORT Process <0.21850.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.046 [error] <0.21854.0> gen_server <0.21854.0> terminated with reason: killed
+2018-06-03 12:00:50.046 [error] <0.21854.0> CRASH REPORT Process <0.21854.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.050 [error] <0.21858.0> gen_server <0.21858.0> terminated with reason: killed
+2018-06-03 12:00:50.051 [error] <0.21858.0> CRASH REPORT Process <0.21858.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.055 [error] <0.21862.0> gen_server <0.21862.0> terminated with reason: killed
+2018-06-03 12:00:50.055 [error] <0.21862.0> CRASH REPORT Process <0.21862.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.061 [error] <0.21866.0> gen_server <0.21866.0> terminated with reason: killed
+2018-06-03 12:00:50.061 [error] <0.21866.0> CRASH REPORT Process <0.21866.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.065 [error] <0.21870.0> gen_server <0.21870.0> terminated with reason: killed
+2018-06-03 12:00:50.065 [error] <0.21870.0> CRASH REPORT Process <0.21870.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.067 [error] <0.21874.0> gen_server <0.21874.0> terminated with reason: killed
+2018-06-03 12:00:50.067 [error] <0.21874.0> CRASH REPORT Process <0.21874.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.070 [error] <0.21878.0> gen_server <0.21878.0> terminated with reason: killed
+2018-06-03 12:00:50.070 [error] <0.21878.0> CRASH REPORT Process <0.21878.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.073 [error] <0.21882.0> gen_server <0.21882.0> terminated with reason: killed
+2018-06-03 12:00:50.073 [error] <0.21882.0> CRASH REPORT Process <0.21882.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.075 [error] <0.21886.0> gen_server <0.21886.0> terminated with reason: killed
+2018-06-03 12:00:50.075 [error] <0.21886.0> CRASH REPORT Process <0.21886.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.078 [error] <0.21890.0> gen_server <0.21890.0> terminated with reason: killed
+2018-06-03 12:00:50.078 [error] <0.21890.0> CRASH REPORT Process <0.21890.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.080 [error] <0.21894.0> gen_server <0.21894.0> terminated with reason: killed
+2018-06-03 12:00:50.080 [error] <0.21894.0> CRASH REPORT Process <0.21894.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.095 [error] <0.21898.0> gen_server <0.21898.0> terminated with reason: killed
+2018-06-03 12:00:50.189 [error] <0.21898.0> CRASH REPORT Process <0.21898.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.189 [error] <0.21902.0> gen_server <0.21902.0> terminated with reason: killed
+2018-06-03 12:00:50.190 [error] <0.21902.0> CRASH REPORT Process <0.21902.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.190 [error] <0.21906.0> gen_server <0.21906.0> terminated with reason: killed
+2018-06-03 12:00:50.190 [error] <0.21906.0> CRASH REPORT Process <0.21906.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.190 [error] <0.21910.0> gen_server <0.21910.0> terminated with reason: killed
+2018-06-03 12:00:50.190 [error] <0.21910.0> CRASH REPORT Process <0.21910.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:50.190 [error] <0.21914.0> gen_server <0.21914.0> terminated with reason: killed
+2018-06-03 12:00:50.190 [error] <0.21914.0> CRASH REPORT Process <0.21914.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.003 [warning] <0.1246.0> lager_error_logger_h dropped 424 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:51.003 [error] <0.23578.0> gen_server <0.23578.0> terminated with reason: killed
+2018-06-03 12:00:51.004 [error] <0.23578.0> CRASH REPORT Process <0.23578.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.007 [error] <0.23582.0> gen_server <0.23582.0> terminated with reason: killed
+2018-06-03 12:00:51.007 [error] <0.23582.0> CRASH REPORT Process <0.23582.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.011 [error] <0.23586.0> gen_server <0.23586.0> terminated with reason: killed
+2018-06-03 12:00:51.011 [error] <0.23586.0> CRASH REPORT Process <0.23586.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.014 [error] <0.23590.0> gen_server <0.23590.0> terminated with reason: killed
+2018-06-03 12:00:51.014 [error] <0.23590.0> CRASH REPORT Process <0.23590.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.016 [error] <0.23594.0> gen_server <0.23594.0> terminated with reason: killed
+2018-06-03 12:00:51.016 [error] <0.23594.0> CRASH REPORT Process <0.23594.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.018 [error] <0.23598.0> gen_server <0.23598.0> terminated with reason: killed
+2018-06-03 12:00:51.018 [error] <0.23598.0> CRASH REPORT Process <0.23598.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.025 [error] <0.23602.0> gen_server <0.23602.0> terminated with reason: killed
+2018-06-03 12:00:51.025 [error] <0.23602.0> CRASH REPORT Process <0.23602.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.027 [error] <0.23606.0> gen_server <0.23606.0> terminated with reason: killed
+2018-06-03 12:00:51.027 [error] <0.23606.0> CRASH REPORT Process <0.23606.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.032 [error] <0.23610.0> gen_server <0.23610.0> terminated with reason: killed
+2018-06-03 12:00:51.032 [error] <0.23610.0> CRASH REPORT Process <0.23610.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.042 [error] <0.23614.0> gen_server <0.23614.0> terminated with reason: killed
+2018-06-03 12:00:51.043 [error] <0.23614.0> CRASH REPORT Process <0.23614.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.052 [error] <0.23618.0> gen_server <0.23618.0> terminated with reason: killed
+2018-06-03 12:00:51.052 [error] <0.23618.0> CRASH REPORT Process <0.23618.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.057 [error] <0.23622.0> gen_server <0.23622.0> terminated with reason: killed
+2018-06-03 12:00:51.057 [error] <0.23622.0> CRASH REPORT Process <0.23622.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.063 [error] <0.23626.0> gen_server <0.23626.0> terminated with reason: killed
+2018-06-03 12:00:51.063 [error] <0.23626.0> CRASH REPORT Process <0.23626.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.081 [error] <0.23630.0> gen_server <0.23630.0> terminated with reason: killed
+2018-06-03 12:00:51.081 [error] <0.23630.0> CRASH REPORT Process <0.23630.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.083 [error] <0.23634.0> gen_server <0.23634.0> terminated with reason: killed
+2018-06-03 12:00:51.083 [error] <0.23634.0> CRASH REPORT Process <0.23634.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.090 [error] <0.23638.0> gen_server <0.23638.0> terminated with reason: killed
+2018-06-03 12:00:51.090 [error] <0.23638.0> CRASH REPORT Process <0.23638.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.092 [error] <0.23642.0> gen_server <0.23642.0> terminated with reason: killed
+2018-06-03 12:00:51.092 [error] <0.23642.0> CRASH REPORT Process <0.23642.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.095 [error] <0.23646.0> gen_server <0.23646.0> terminated with reason: killed
+2018-06-03 12:00:51.095 [error] <0.23646.0> CRASH REPORT Process <0.23646.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.099 [error] <0.23650.0> gen_server <0.23650.0> terminated with reason: killed
+2018-06-03 12:00:51.099 [error] <0.23650.0> CRASH REPORT Process <0.23650.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.113 [error] <0.23654.0> gen_server <0.23654.0> terminated with reason: killed
+2018-06-03 12:00:51.230 [error] <0.23654.0> CRASH REPORT Process <0.23654.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.230 [error] <0.23658.0> gen_server <0.23658.0> terminated with reason: killed
+2018-06-03 12:00:51.231 [error] <0.23658.0> CRASH REPORT Process <0.23658.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.231 [error] <0.23662.0> gen_server <0.23662.0> terminated with reason: killed
+2018-06-03 12:00:51.231 [error] <0.23662.0> CRASH REPORT Process <0.23662.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.231 [error] <0.23666.0> gen_server <0.23666.0> terminated with reason: killed
+2018-06-03 12:00:51.231 [error] <0.23666.0> CRASH REPORT Process <0.23666.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.231 [error] <0.23670.0> gen_server <0.23670.0> terminated with reason: killed
+2018-06-03 12:00:51.231 [error] <0.23670.0> CRASH REPORT Process <0.23670.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:51.231 [error] <0.23674.0> gen_server <0.23674.0> terminated with reason: killed
+2018-06-03 12:00:51.231 [error] <0.23674.0> CRASH REPORT Process <0.23674.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.000 [warning] <0.1246.0> lager_error_logger_h dropped 748 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:00:52.000 [error] <0.26590.0> gen_server <0.26590.0> terminated with reason: killed
+2018-06-03 12:00:52.000 [error] <0.26590.0> CRASH REPORT Process <0.26590.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.016 [error] <0.26594.0> gen_server <0.26594.0> terminated with reason: killed
+2018-06-03 12:00:52.016 [error] <0.26594.0> CRASH REPORT Process <0.26594.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.019 [error] <0.26598.0> gen_server <0.26598.0> terminated with reason: killed
+2018-06-03 12:00:52.019 [error] <0.26598.0> CRASH REPORT Process <0.26598.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.022 [error] <0.26602.0> gen_server <0.26602.0> terminated with reason: killed
+2018-06-03 12:00:52.022 [error] <0.26602.0> CRASH REPORT Process <0.26602.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.023 [error] <0.26606.0> gen_server <0.26606.0> terminated with reason: killed
+2018-06-03 12:00:52.023 [error] <0.26606.0> CRASH REPORT Process <0.26606.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.026 [error] <0.26610.0> gen_server <0.26610.0> terminated with reason: killed
+2018-06-03 12:00:52.026 [error] <0.26610.0> CRASH REPORT Process <0.26610.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.027 [error] <0.26614.0> gen_server <0.26614.0> terminated with reason: killed
+2018-06-03 12:00:52.027 [error] <0.26614.0> CRASH REPORT Process <0.26614.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.034 [error] <0.26618.0> gen_server <0.26618.0> terminated with reason: killed
+2018-06-03 12:00:52.035 [error] <0.26618.0> CRASH REPORT Process <0.26618.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.044 [error] <0.26622.0> gen_server <0.26622.0> terminated with reason: killed
+2018-06-03 12:00:52.045 [error] <0.26622.0> CRASH REPORT Process <0.26622.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.047 [error] <0.26626.0> gen_server <0.26626.0> terminated with reason: killed
+2018-06-03 12:00:52.047 [error] <0.26626.0> CRASH REPORT Process <0.26626.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.049 [error] <0.26630.0> gen_server <0.26630.0> terminated with reason: killed
+2018-06-03 12:00:52.049 [error] <0.26630.0> CRASH REPORT Process <0.26630.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.052 [error] <0.26634.0> gen_server <0.26634.0> terminated with reason: killed
+2018-06-03 12:00:52.052 [error] <0.26634.0> CRASH REPORT Process <0.26634.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.056 [error] <0.26638.0> gen_server <0.26638.0> terminated with reason: killed
+2018-06-03 12:00:52.056 [error] <0.26638.0> CRASH REPORT Process <0.26638.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.060 [error] <0.26642.0> gen_server <0.26642.0> terminated with reason: killed
+2018-06-03 12:00:52.060 [error] <0.26642.0> CRASH REPORT Process <0.26642.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.062 [error] <0.26646.0> gen_server <0.26646.0> terminated with reason: killed
+2018-06-03 12:00:52.062 [error] <0.26646.0> CRASH REPORT Process <0.26646.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.066 [error] <0.26650.0> gen_server <0.26650.0> terminated with reason: killed
+2018-06-03 12:00:52.066 [error] <0.26650.0> CRASH REPORT Process <0.26650.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.079 [error] <0.26654.0> gen_server <0.26654.0> terminated with reason: killed
+2018-06-03 12:00:52.080 [error] <0.26654.0> CRASH REPORT Process <0.26654.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.086 [error] <0.26658.0> gen_server <0.26658.0> terminated with reason: killed
+2018-06-03 12:00:52.087 [error] <0.26658.0> CRASH REPORT Process <0.26658.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.088 [error] <0.26662.0> gen_server <0.26662.0> terminated with reason: killed
+2018-06-03 12:00:52.089 [error] <0.26662.0> CRASH REPORT Process <0.26662.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.091 [error] <0.26666.0> gen_server <0.26666.0> terminated with reason: killed
+2018-06-03 12:00:52.091 [error] <0.26666.0> CRASH REPORT Process <0.26666.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.094 [error] <0.26670.0> gen_server <0.26670.0> terminated with reason: killed
+2018-06-03 12:00:52.264 [error] <0.26670.0> CRASH REPORT Process <0.26670.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.264 [error] <0.26674.0> gen_server <0.26674.0> terminated with reason: killed
+2018-06-03 12:00:52.264 [error] <0.26674.0> CRASH REPORT Process <0.26674.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.264 [error] <0.26678.0> gen_server <0.26678.0> terminated with reason: killed
+2018-06-03 12:00:52.264 [error] <0.26678.0> CRASH REPORT Process <0.26678.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.264 [error] <0.26682.0> gen_server <0.26682.0> terminated with reason: killed
+2018-06-03 12:00:52.264 [error] <0.26682.0> CRASH REPORT Process <0.26682.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:52.264 [error] <0.26686.0> gen_server <0.26686.0> terminated with reason: killed
+2018-06-03 12:00:52.264 [error] <0.26686.0> CRASH REPORT Process <0.26686.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:00:53.265 [warning] <0.1246.0> lager_error_logger_h dropped 477 messages in the last second that exceeded the limit of 50 messages/sec
+2018-06-03 12:01:26.170 [error] <0.28413.0> gen_server <0.28413.0> terminated with reason: killed
+2018-06-03 12:01:26.170 [error] <0.28413.0> CRASH REPORT Process <0.28413.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.170 [error] <0.28416.0> gen_server <0.28416.0> terminated with reason: killed
+2018-06-03 12:01:26.170 [error] <0.28416.0> CRASH REPORT Process <0.28416.0> with 1 neighbours exited with reason: killed in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.170 [error] <0.28411.0>@mc_topology:parse_ismaster:204 gen_server <0.28411.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.170 [error] <0.28411.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28411.0> with 1 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.170 [error] <0.28420.0>@mc_topology:parse_ismaster:204 gen_server <0.28420.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28420.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28420.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.171 [error] <0.28422.0>@mc_topology:parse_ismaster:204 gen_server <0.28422.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28422.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28422.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.171 [error] <0.28425.0>@mc_topology:parse_ismaster:204 gen_server <0.28425.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28425.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28425.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.171 [error] <0.28429.0>@mc_topology:parse_ismaster:204 gen_server <0.28429.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28429.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28429.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.171 [error] <0.28431.0>@mc_topology:parse_ismaster:204 gen_server <0.28431.0> terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28431.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process <0.28431.0> with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 12:01:26.171 [error] <0.28410.0>@mc_topology:parse_ismaster:204 gen_server mc_pool_sup terminated with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204
+2018-06-03 12:01:26.171 [error] <0.28410.0>@mc_topology:parse_ismaster:204 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no match of right hand value [] in mc_topology:parse_ismaster/4 line 204 in gen_server:terminate/7 line 812
+2018-06-03 23:34:46.118 [error] <0.28443.0>@mc_utils:to_binary:74 gen_server <0.28443.0> terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:34:46.118 [error] <0.28443.0>@mc_utils:to_binary:74 CRASH REPORT Process <0.28443.0> with 2 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812
+2018-06-03 23:34:46.119 [error] <0.28442.0>@mc_utils:to_binary:74 gen_server mc_pool_sup terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:34:46.119 [error] <0.28442.0>@mc_utils:to_binary:74 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812
+2018-06-03 23:35:11.858 [error] <0.28447.0>@mc_utils:to_binary:74 gen_server <0.28447.0> terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:35:11.859 [error] <0.28447.0>@mc_utils:to_binary:74 CRASH REPORT Process <0.28447.0> with 1 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812
+2018-06-03 23:35:11.859 [error] <0.28446.0>@mc_utils:to_binary:74 gen_server mc_pool_sup terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:35:11.859 [error] <0.28446.0>@mc_utils:to_binary:74 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812
+2018-06-03 23:35:24.023 [error] <0.28451.0>@mc_topology_logics:init_seeds:111 gen_server <0.28451.0> terminated with reason: no function clause matching mc_topology_logics:init_seeds(<<"127.0.0.1">>, 65561, [{name,dong}], [{w_mode,slave_ok}]) line 111
+2018-06-03 23:35:24.024 [error] <0.28451.0>@mc_topology_logics:init_seeds:111 CRASH REPORT Process <0.28451.0> with 1 neighbours exited with reason: no function clause matching mc_topology_logics:init_seeds(<<"127.0.0.1">>, 65561, [{name,dong}], [{w_mode,slave_ok}]) line 111 in gen_server:terminate/7 line 812
+2018-06-03 23:35:24.024 [error] <0.28450.0>@mc_topology_logics:init_seeds:111 gen_server mc_pool_sup terminated with reason: no function clause matching mc_topology_logics:init_seeds(<<"127.0.0.1">>, 65561, [{name,dong}], [{w_mode,slave_ok}]) line 111
+2018-06-03 23:35:24.024 [error] <0.28450.0>@mc_topology_logics:init_seeds:111 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no function clause matching mc_topology_logics:init_seeds(<<"127.0.0.1">>, 65561, [{name,dong}], [{w_mode,slave_ok}]) line 111 in gen_server:terminate/7 line 812
+2018-06-03 23:35:41.939 [error] <0.28455.0>@mc_utils:to_binary:74 gen_server <0.28455.0> terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:35:41.939 [error] <0.28455.0>@mc_utils:to_binary:74 CRASH REPORT Process <0.28455.0> with 1 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812
+2018-06-03 23:35:41.939 [error] <0.28454.0>@mc_utils:to_binary:74 gen_server mc_pool_sup terminated with reason: no function clause matching mc_utils:to_binary(49) line 74
+2018-06-03 23:35:41.939 [error] <0.28454.0>@mc_utils:to_binary:74 CRASH REPORT Process mc_pool_sup with 0 neighbours exited with reason: no function clause matching mc_utils:to_binary(49) line 74 in gen_server:terminate/7 line 812

@@ -1,0 +1,14 @@
+.eunit
+*.o
+*.beam
+*.plt
+console.log*
+*swp
+*~
+erl_crash.dump
+ebin
+.rebar
+.idea/
+octopus.iml
+mongodbdriver.config
+deps/

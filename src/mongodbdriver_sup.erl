@@ -23,5 +23,8 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-    {ok, { {one_for_one, 5, 10}, []} }.
+      Mongodbdriver = {db_connection,
+                {db_connection, start_link, []},
+                permanent, 5000, worker, []},
+    {ok, { {one_for_one, 5, 10}, [Mongodbdriver]} }.
 

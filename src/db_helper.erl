@@ -19,10 +19,10 @@
 
 -include("include/mongodbdriver.hrl").
 
-
+%%unchanged
 fetch_list(Record, Limit) ->
     fetch_list(Record, 0, Limit).
-
+%%%unchanged
 fetch_list(Record, Skip, Limit) ->
     DB = octopus,
     Fun = fun() ->
@@ -37,61 +37,42 @@ fetch_list(Record, Skip, Limit) ->
         {ok, Info} -> {ok, Info}
     end.
 
-
-
+%%%ok
 fetch_list(Record) ->
     DB = octopus,
-    Fun = fun() ->
-        Cursor = mongrel:find(Record),
-        mongrel_cursor:rest(Cursor)
-    end,
-
-    Res = mongo_helper:do_query("", DB, Fun),
+    Res  = mongrel:find(Record),
     case Res of
         {ok, {}} -> {error, notfound};
         {ok, Infos} -> {ok, Infos}
     end.
 
-
+%%%
 fetch(Record, Projector) ->
     DB = octopus,
-    Fun = fun() ->
-        Cursor = mongrel:find(Record, Projector),
-        mongrel_cursor:next(Cursor)
-    end,
-
-    Res = mongo_helper:do_query("", DB, Fun),
+    Res = mongrel:find_one(Record, Projector),
     case Res of
         {ok, {}} -> {error, notfound};
         {ok, Info} -> {ok, Info}
     end.
 
+%%%ok
 count(Record) ->
     DB = octopus,
-    Fun = fun() ->
-             mongrel:count(Record)
-          end,
-    case mongo_helper:do_query("", DB, Fun) of
-        {ok, Num} ->
+    Res = mongrel:count(Record),
+    case Res of
+        Num when is_integer(Num) ->
             Num;
         Error ->
             lager:error("Error = ~p", [Error]),
             0
     end.
 
-
-
-
-
+%%%unchange
 fetch(Record) ->
     DB = octopus,
     case check_info(Record) of 
         true ->
-            Fun = fun() ->
-                Cursor = mongrel:find(Record),
-                mongrel_cursor:next(Cursor)
-            end,
-            Res = mongo_helper:do_query("", DB, Fun),
+            Res = mongrel:find_one(Record),
             case Res of
                 {ok, {}} -> {error, notfound};
                 {ok, Info} -> {ok, Info}
@@ -100,25 +81,25 @@ fetch(Record) ->
             {error, <<"lacking query condition">>}
     end.
 
-
+%%%
 save(Info) ->
     Module =get_backfun(Info),
+    io:format("Info = ~p Module=~p~n",[Info, Module]),
     save(Info, Module).
-    
+%%%    
 save(Info, Module) ->
     Id = element(2, Info),
-    lager:debug("Module = ~p", [Module]),
-    lager:debug("Id = ~p", [Id]),
+    io:format("Module = ~p", [Module]),
+    io:format("Id = ~p", [Id]),
     DB = octopus,
     case Module:fetch(Id) of
         {ok, OldInfo} ->
-            lager:debug("######1#####"),
+            io:format("######1#####"),
             MergedInfo = Module:merge(OldInfo, Info),
-            Fun = fun() -> 
-                mongrel:save(MergedInfo) 
-            end,
-            {ok, ok} = mongo_helper:do_query("", DB, Fun),
-            update_ts_inter(MergedInfo),
+            io:format("merge =~p~n",[MergedInfo]),
+            Res = mongrel:update(MergedInfo), 
+            io:format("Res =~p~n",[Res]),
+            %update_ts_inter(MergedInfo),
             {ok, MergedInfo};
         {error, notfound} ->
             Module:create(Info),
@@ -172,6 +153,7 @@ merge(Len, Old, Info) ->
         end,
     merge(Len-1, New, Info).
 
+%%%ok 
 create(Info) ->
     %record
     mongrel:insert(Info).
@@ -192,11 +174,8 @@ delete(Info) ->
     DB = octopus,
     case check_info(Info) of 
         true ->
-            update_ts_for_delete(Info),
-            Fun = fun() ->
-                    mongrel:delete(Info)
-                  end,
-            {ok, ok} = mongo_helper:do_query("", DB, Fun),
+           % update_ts_for_delete(Info),
+            Res = mongrel:delete(Info),
             {ok, Info};
         false ->
             {error, <<"lacking delete condition">>}
@@ -277,18 +256,3 @@ update_ts_for_delete(Info) ->
             ok
     end.
 
-%%count_test() ->
-%%    Exp = 9,
-%%    Return = count(#octopus_hub_info{}),
-%%    lager:debug("Return = ~p", [Return]),
-%%    ok.
-%%
-%%update_test()  ->
-%%   DB = octopus,
-%%    Fun = fun() -> 
-%%         mongrel:modify(#octopus_log{source_id = <<"a019b46a91bf8e64996baa3729a068f75018f4f1">>},
-%%                        {'$set', #octopus_log{comet_id = <<"ssss">>}}) 
-%%     end,
-%%    {ok, ok} = mongo_helper:do_query("", DB, Fun).
-%%
-%%

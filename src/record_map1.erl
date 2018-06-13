@@ -72,8 +72,13 @@ find_one(Selector, CollectionName, Tsh)->
     mongo_api:find_one(Tsh, CollectionName, Selector, Projector).
 
 update(Info, CollectionName, Tsh)->
+    Pid = start_connection(),
     io:format("Tsh =~p~n",[Tsh]),
-    Out = mongo_api:update(Tsh, CollectionName, Info),
+    Collection = datacollection,
+    Selector = #{<<"_id">> => <<"123">>},
+    Doc = #{<<"name">> => <<"dong">>},
+    Opts = #{},
+    Out = mongo_api:update(Pid, Collection, Selector, Doc, Opts),
     io:format("out Info = ~p~n",[Out]),
     Out.
 
@@ -85,7 +90,7 @@ test()->
     ok.
 
 test_1()->
-    Pid = db_connection:get_con(),
+    Pid = db_connection:get_conn(),
     Info = #datacollection{'_id'= <<"1243454">>, data = <<"ok">>},
     io:format("info=~p~n",[Info]),
     KeyOrg = record_info(fields, datacollection),
@@ -95,7 +100,53 @@ test_1()->
     insert(Info1, Pid),
     ok.
 
+test_2()->
+    Pid = db_connection:get_conn(),
+    Info = #datacollection{'_id'= <<"1243454">>, data = <<"ok">>},
+    io:format("info=~p~n",[Info]),
+    KeyOrg = record_info(fields, datacollection),
+    Keys = [<<"_id">>] ++ KeyOrg -- ['_id'] ,
+    Info1 = record_to_map(Info,Keys),
+    io:format("info =~p~n",[Info1]),
+    find_one(Info1, datacollection, Pid),
+    ok.
+
+
+test_3()->
+    Pid = db_connection:get_conn(),
+    Info = #datacollection{'_id'= <<"1234567">>, data = <<"ok">>},
+    io:format("info=~p~n",[Info]),
+    KeyOrg = record_info(fields, datacollection),
+    Keys = [<<"_id">>] ++ KeyOrg -- ['_id'] ,
+    Info1 = record_to_map(Info,Keys),
+    io:format("info =~p~n",[Info1]),
+    update(Info1, datacollection, Pid),
+    ok.
+
 test_insert()->
     Id =  list_to_binary(integer_to_list(erlang:monotonic_time())), 
     Info = #octopus_datacollection{'_id' = Id, 'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"3">>}, 
     datacollection_helper:create(Info).
+
+test_find()->
+    Info = #octopus_datacollection{'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"3">>},
+    datacollection_helper:fetch(Info).
+
+test_count()->
+    Info = #octopus_datacollection{'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"3">>},
+    datacollection_helper:count(Info).
+
+test_delete()->
+    %Info = #octopus_datacollection{'_id' = <<"-576460644743358709">>, type = <<"1">>, data = <<"3">>},
+    Id = <<"-576460644743358709">>,
+    datacollection_helper:clear(Id).
+
+test_save()->
+    Info = #octopus_datacollection{'_id' = <<"-576460275395216712">>,'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"nihao">>},
+    datacollection_helper:save(Info).
+
+test_find_more(W)->
+   [{record_map1:test_find(),A}||A <-lists:seq(1,W)].
+
+test_insert_more(W)->
+   [{record_map1:test_insert(),A}||A <-lists:seq(1,W)].

@@ -66,7 +66,8 @@ insert(Info, CollectionName, Tsh)->
     Out = mongo_api:insert(Tsh, CollectionName, Info),
     io:format("out Info = ~p~n",[Out]),
     Out.
-    
+
+%%%output:  undefined/ Map,eg:#{<<"_id">> => <<"123456">>,<<"name">> => <<"Yankees">>} 
 find_one(Selector, CollectionName, Tsh)->
     Projector = #{}, %#{<<"_id">> =>true}.
     mongo_api:find_one(Tsh, CollectionName, Selector, Projector).
@@ -141,9 +142,46 @@ test_delete()->
     Id = <<"-576460644743358709">>,
     datacollection_helper:clear(Id).
 
-test_save()->
-    Info = #octopus_datacollection{'_id' = <<"-576460275395216712">>,'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"nihao">>},
+test_save_old()->
+    Info = #octopus_datacollection{'_id' = <<"-576460275395216712">>,'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"nihao">>, ts= <<>>, time_created= <<>>, time_updated
+= <<"7">>},
     datacollection_helper:save(Info).
+
+test_save_new()->
+    Id =  list_to_binary(integer_to_list(erlang:monotonic_time())),
+    Info = #octopus_datacollection{'_id' = Id,'user_id' = <<"2222222222">>, type = <<"1">>, data = <<"nihao">>, ts= <<>>, time_created= <<>>, time_updated
+= <<"7">>},
+    datacollection_helper:save(Info).
+
+test_fetch_limit(Skip, Limit)->
+    Info = #octopus_datacollection{'user_id' = <<"2222222222">>, type = <<"1">>},
+    datacollection_helper:fetch(Info, Skip, Limit).
+
+test_update_recordkey_setrecord()->
+    Id = <<"-576460742498915832">>,
+    Data = <<"0">>,
+    datacollection_helper:update_recordkey_setrecord(Id, Data).
+
+test_update_in()->
+    Ids = [<<"-576460742377757447">>, <<"-576460738714441920">>, <<"-576460741766496061">>],
+    Data = <<"2">>,
+    datacollection_helper:update_in(Ids,Data).
+
+test_fetch_all()->
+    Data = <<"2">>,
+    datacollection_helper:fetch_all(Data).
+
+test_fetch_gt_lte()->
+   Datagt = <<"0">>,
+   Datalte = <<"2">>,
+   datacollection_helper:fetch_gt_lte(Datagt,Datalte).
+
+test_fetch_selfquery_and_in()->
+    Data1 = <<2>>,
+    UserId1 = <<"2222222222">>,
+    Data2 = <<"0">>,
+    UserId2 = <<"2222222222">>,
+    datacollection_helper:fetch_selfquery_and_in(Data1,UserId1,Data2,UserId2). 
 
 test_find_more(W)->
    [{record_map1:test_find(),A}||A <-lists:seq(1,W)].

@@ -19,21 +19,16 @@
 
 -include("include/mongodbdriver.hrl").
 
-%%unchanged
+%%%
 fetch_list(Record, Limit) ->
     fetch_list(Record, 0, Limit).
-%%%unchanged
+%%%
 fetch_list(Record, Skip, Limit) ->
     DB = octopus,
-    Fun = fun() ->
-        Cursor = mongrel:find(Record, [], Skip, Limit),
-        mongrel_cursor:take(Limit, Cursor)
-        %mongrel_cursor:rest(Cursor)
-    end,
-
-    Res = mongo_helper:do_query("", DB, Fun),
+    Res = mongrel:find(Record, #{}, Skip, Limit),
     case Res of
         {ok, {}} -> {error, notfound};
+        {error, notfound} -> {error, notfound};
         {ok, Info} -> {ok, Info}
     end.
 
@@ -74,6 +69,7 @@ fetch(Record) ->
         true ->
             Res = mongrel:find_one(Record),
             case Res of
+                 {error, notfound}-> {error, notfound};
                 {ok, {}} -> {error, notfound};
                 {ok, Info} -> {ok, Info}
             end;
@@ -81,7 +77,7 @@ fetch(Record) ->
             {error, <<"lacking query condition">>}
     end.
 
-%%%
+%%%ok
 save(Info) ->
     Module =get_backfun(Info),
     io:format("Info = ~p Module=~p~n",[Info, Module]),
@@ -91,7 +87,6 @@ save(Info, Module) ->
     Id = element(2, Info),
     io:format("Module = ~p", [Module]),
     io:format("Id = ~p", [Id]),
-    DB = octopus,
     case Module:fetch(Id) of
         {ok, OldInfo} ->
             io:format("######1#####"),
@@ -119,11 +114,7 @@ mogorel_save(Record) ->
 update(Record, {'$set', Modifier})  ->
     update(Record, Modifier);
 update(Record, Modifier)  ->
-   DB = octopus,
-    Fun = fun() -> 
-         mongrel:modify(Record, {'$set', Modifier}) 
-     end,
-    {ok, ok} = mongo_helper:do_query("", DB, Fun).
+   mongrel:modify(Record, {'$set', Modifier}). 
  
 update(Record)  ->
     mongrel:modify(Record).

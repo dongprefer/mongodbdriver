@@ -4,9 +4,10 @@
 
 -export([start_link/0, 
          get_conn/0, 
+         get_secondary_conn/0, 
          restart/0]).
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
--record(state, {topology}).%topology is the pid that returns after connection.
+-record(state, {topologymain, topologysecondary}).%topology is the pid that returns after connection.
 
 start_link() ->
     mongo_client:map(),
@@ -19,6 +20,10 @@ get_conn() ->
     {ok,Connection} = gen_server:call(?MODULE, {get_conn}),
     Connection.
 
+get_secondary_conn()->
+    {ok,Connection} = gen_server:call(?MODULE, {get_secondary_conn}),
+    Connection.
+
 init([]) ->
     State = get_start(),
     process_flag(trap_exit, true),
@@ -27,7 +32,9 @@ init([]) ->
 handle_call({restart}, _From, _State) ->
     NewState = get_start(),
     {reply, ok, NewState};
-handle_call({get_conn}, _From, #state{topology = Topology} = State) ->
+handle_call({get_conn}, _From, #state{topologymain = Topology} = State) ->
+    {reply, {ok, Topology}, State};
+handle_call({get_secondary_conn}, _From, #state{topologysecondary = Topology} = State) ->
     {reply, {ok, Topology}, State}.
 
 handle_cast(_Msg, State) ->
@@ -58,11 +65,24 @@ code_change(_OldVsn, State, _Extra) ->
 
 
 get_start() ->
+    TopologyMain = get_mainread_connection(),
+    TopologySecondary = get_secondaryread_connection(),
+    #state{topologymain = TopologyMain, topologysecondary = TopologySecondary}.
+
+get_mainread_connection()->
     %{DbSet,BuzzMongoHosts} = octopus_config:get(<<"mongo">>, <<"octopus">>),
     Type = sharded,
     Hosts = ["10.128.130.241:27018","10.128.128.55:27018"],
-    Options = [{name,a},{pool_size,5},{pool_size,5},{ connectTimeoutMS, 20000 },{rp_mode,secondaryPreferred}],
-    WorkerOptions = [{w_mode, master},{database, test}],
+    Options = [{name,a},{pool_size,5},{ connectTimeoutMS, 20000 },{rp_mode,primaryPreferred}],
+    WorkerOptions = [{w_mode, master},{database, octopus}],
     {ok, Topology} = mongo_api:connect(Type, Hosts, Options, WorkerOptions),
-    #state{topology = Topology}.
+    Topology.
+
+get_secondaryread_connection()->
+    Type = sharded,
+    Hosts = ["10.128.130.241:27018","10.128.128.55:27018"],
+    Options = [{name,a},{pool_size,5},{ connectTimeoutMS, 20000 },{rp_mode,secondaryPreferred}],
+    WorkerOptions = [{w_mode, master},{database, octopus}],
+    {ok, Topology} = mongo_api:connect(Type, Hosts, Options, WorkerOptions),
+    Topology.
 

@@ -9,7 +9,6 @@
          fetch_list/3,
          merge/2,
          save/2,
-         replace/2,
          update_ts/2,
          count/1,
          save/1,
@@ -24,26 +23,24 @@ fetch_list(Record, Limit) ->
     fetch_list(Record, 0, Limit).
 %%%
 fetch_list(Record, Skip, Limit) ->
-    DB = octopus,
     Res = mongrel:find(Record, #{}, Skip, Limit),
     case Res of
         {ok, {}} -> {error, notfound};
-        {error, notfound} -> {error, notfound};
+        {error, _}-> {error, notfound};
         {ok, Info} -> {ok, Info}
     end.
 
 %%%ok
 fetch_list(Record) ->
-    DB = octopus,
     Res  = mongrel:find(Record),
     case Res of
         {ok, {}} -> {error, notfound};
+        {error, _}-> {error, notfound};
         {ok, Infos} -> {ok, Infos}
     end.
 
 %%%
 fetch(Record, Projector) ->
-    DB = octopus,
     Res = mongrel:find_one(Record, Projector),
     case Res of
         {ok, {}} -> {error, notfound};
@@ -52,7 +49,6 @@ fetch(Record, Projector) ->
 
 %%%ok
 count(Record) ->
-    DB = octopus,
     Res = mongrel:count(Record),
     case Res of
         Num when is_integer(Num) ->
@@ -64,7 +60,6 @@ count(Record) ->
 
 %%%unchange
 fetch(Record) ->
-    DB = octopus,
     case check_info(Record) of 
         true ->
             Res = mongrel:find_one(Record),
@@ -80,21 +75,19 @@ fetch(Record) ->
 %%%ok
 save(Info) ->
     Module =get_backfun(Info),
-    io:format("Info = ~p Module=~p~n",[Info, Module]),
+    %io:format("Info = ~p Module=~p~n",[Info, Module]),
     save(Info, Module).
 %%%    
 save(Info, Module) ->
     Id = element(2, Info),
-    io:format("Module = ~p", [Module]),
-    io:format("Id = ~p", [Id]),
+    %io:format("Module = ~p", [Module]),
     case Module:fetch(Id) of
         {ok, OldInfo} ->
-            io:format("######1#####"),
             MergedInfo = Module:merge(OldInfo, Info),
-            io:format("merge =~p~n",[MergedInfo]),
+            %io:format("merge =~p~n",[MergedInfo]),
             Res = mongrel:update(MergedInfo), 
-            io:format("Res =~p~n",[Res]),
-            %update_ts_inter(MergedInfo),
+            %io:format("Res =~p~n",[Res]),
+            update_ts_inter(MergedInfo),
             {ok, MergedInfo};
         {error, notfound} ->
             Module:create(Info),
@@ -105,11 +98,7 @@ save(Info, Module) ->
     end.
 
 mogorel_save(Record) ->
-   DB = octopus,
-    Fun = fun() -> 
-         mongrel:insert(Record) 
-     end,
-    {ok, ok} = mongo_helper:do_query("", DB, Fun).
+    create(Record).
 
 update(Record, {'$set', Modifier})  ->
     update(Record, Modifier);
@@ -118,15 +107,6 @@ update(Record, Modifier)  ->
  
 update(Record)  ->
     mongrel:modify(Record).
-
-replace(OldInfo, NewInfo) ->
-    DB = octopus,
-    Fun = fun() -> 
-        mongrel:replace(OldInfo, NewInfo) 
-    end,
-    update_ts_inter(NewInfo),
-    {ok, []} = mongo_helper:do_query("", DB, Fun),
-    {OldInfo, NewInfo}.
 
 merge(Old, Info) ->
     lager:debug("Old= ~p, Info= ~p", [Old, Info]),
@@ -151,21 +131,14 @@ create(Info) ->
 
 %% TODO the method can not delete all records 
 delete_all(Info) ->
-    DB = octopus,
-    Fun = fun() ->
-            update_ts_for_delete(Info),
-            mongrel:delete(Info)
-          end,
-    {ok, ok} = mongo_helper:do_query("", DB, Fun),
-    {ok, Info}.
-
-
+     update_ts_for_delete(Info),
+     Res = mongrel:delete(Info),
+     {ok, Info}.
 
 delete(Info) ->
-    DB = octopus,
     case check_info(Info) of 
         true ->
-           % update_ts_for_delete(Info),
+            update_ts_for_delete(Info),
             Res = mongrel:delete(Info),
             {ok, Info};
         false ->

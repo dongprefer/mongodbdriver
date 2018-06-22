@@ -10,6 +10,7 @@ connect(_DB) ->
 
 map() ->
    mongrel_mapper:add_mapping(?mapping(octopus_datacollection)),
+   mongrel_mapper:add_mapping(?mapping(octopus_user_info)),
    ok.
 
 close(_MongoClientPools) ->

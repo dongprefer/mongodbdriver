@@ -77,7 +77,7 @@ update_in(Ids, Data) ->
 
 fetch_all(Data) ->%=$and
     RuleInfo = {'$orderby', #octopus_datacollection{data = -1},
-                '$query', #octopus_datacollection{data = {'$all', [Data]}}},
+                '$query', #octopus_datacollection{data = {'$all', Data}}},
     db_helper:fetch_list(RuleInfo).
 
 fetch_gt_lte(Datagt,Datalte) ->

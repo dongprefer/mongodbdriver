@@ -17,24 +17,24 @@
 
 save(Info) ->
     Time = os:timestamp(),
-    db_helper:save(Info#octopus_datacollection{time_updated = Time}).
+    db_helper:save(Info#datacollection{time_updated = Time}).
 
 clear(Info) ->
   delete(Info).
 
 delete(Id) ->
-    Info = #octopus_datacollection{'_id'= Id},
+    Info = #datacollection{'_id'= Id},
     db_helper:delete(Info).
 
 create(Info) ->
     Time = os:timestamp(),
-    db_helper:create(Info#octopus_datacollection{time_created = Time, time_updated = Time}).
+    db_helper:create(Info#datacollection{time_created = Time, time_updated = Time}).
 
 count(Info) when is_tuple(Info) ->
     db_helper:count(Info).
 
 fetch(Id) when is_binary(Id)->
-    Info = #octopus_datacollection{'_id' = Id},
+    Info = #datacollection{'_id' = Id},
     db_helper:fetch(Info);
 fetch(Info) ->
     db_helper:fetch_list(Info).
@@ -42,18 +42,18 @@ fetch(Info, Skip, Limit) ->
     db_helper:fetch_list(Info, Skip, Limit).
 
 fetch_orderby_query() ->
-    Record ={'$orderby', #octopus_datacollection{time_created = 1},'$query',   #octopus_datacollection{type= <<"3">> }},
+    Record ={'$orderby', #datacollection{time_created = 1},'$query',   #datacollection{type= <<"3">> }},
     db_helper:fetch_list(Record).
 
 merge(Old, New) ->
     db_helper:merge(Old, New).
 
 save_data(Id, Type, Data, Ts)->
-    datacollection_helper:save(#octopus_datacollection{'_id' = Id, type = Type, data = Data, ts = Ts}).
+    datacollection_helper:save(#datacollection{'_id' = Id, type = Type, data = Data, ts = Ts}).
 
 update_recordkey_setrecord(Id,Data) ->
     Time = os:timestamp(),
-    Key = #octopus_datacollection{'_id' = Id},
+    Key = #datacollection{'_id' = Id},
     Record = {'$set', {
                         data, Data,
                         time_updated, Time
@@ -68,7 +68,7 @@ update_recordkey_setrecord(Id,Data) ->
 
 update_in(Ids, Data) ->
     Time = os:timestamp(),
-    Key = #octopus_datacollection{'_id' = {'$in', Ids}},
+    Key = #datacollection{'_id' = {'$in', Ids}},
     Record = {'$set', {
                          data,Data, 
                          time_updated, Time
@@ -76,13 +76,13 @@ update_in(Ids, Data) ->
     db_helper:update(Key, Record).
 
 fetch_all(Data) ->%=$and
-    RuleInfo = {'$orderby', #octopus_datacollection{data = -1},
-                '$query', #octopus_datacollection{data = {'$all', Data}}},
+    RuleInfo = {'$orderby', #datacollection{data = -1},
+                '$query', #datacollection{data = {'$all', Data}}},
     db_helper:fetch_list(RuleInfo).
 
 fetch_gt_lte(Datagt,Datalte) ->
-    Record = {'$orderby', #octopus_datacollection{data = -1},
-        '$query', #octopus_datacollection{
+    Record = {'$orderby', #datacollection{data = -1},
+        '$query', #datacollection{
             data = {'$gt', Datagt, '$lte', Datalte}
         }
     },
@@ -101,7 +101,7 @@ fetch_selfquery_and_in(Data1,UserId1,Data2,UserId2) ->
                     ]
                 }],
     Tuple = to_tuple(ListTuple),
-    Where = {'$orderby', #octopus_datacollection{time_created = -1}, '$self_query', Tuple},
+    Where = {'$orderby', #datacollection{time_created = -1}, '$self_query', Tuple},
     io:format("Where = ~p", [Where]),
     case db_helper:fetch_list(Where, 0, 100) of
         {error, notfound} ->

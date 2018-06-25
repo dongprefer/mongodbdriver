@@ -1,6 +1,7 @@
 -module(db_helper).
 -export([fetch/1,
          fetch/2,
+         fetch/3,
          create/1,
          delete/1,
          delete_all/1,
@@ -18,10 +19,9 @@
 
 -include("include/mongodbdriver.hrl").
 
-%%%
 fetch_list(Record, Limit) ->
     fetch_list(Record, 0, Limit).
-%%%
+
 fetch_list(Record, Skip, Limit) ->
     Res = mongrel:find(Record, #{}, Skip, Limit),
     case Res of
@@ -30,7 +30,6 @@ fetch_list(Record, Skip, Limit) ->
         {ok, Info} -> {ok, Info}
     end.
 
-%%%ok
 fetch_list(Record) ->
     Res  = mongrel:find(Record),
     case Res of
@@ -39,7 +38,6 @@ fetch_list(Record) ->
         {ok, Infos} -> {ok, Infos}
     end.
 
-%%%
 fetch(Record, Projector) ->
     Res = mongrel:find_one(Record, Projector),
     case Res of
@@ -47,7 +45,9 @@ fetch(Record, Projector) ->
         {ok, Info} -> {ok, Info}
     end.
 
-%%%ok
+fetch(Record, Skip, Limit)->
+    fetch_list(Record, Skip, Limit).
+
 count(Record) ->
     Res = mongrel:count(Record),
     case Res of
@@ -151,9 +151,7 @@ get_backfun(Info) ->
     lager:debug("Info= ~p", [Info]),
     InfoName = 
         case list_to_binary(atom_to_list(element(1, Info))) of
-            <<"octopus_log">> ->
-                <<"octopus_log_helper">>;
-            <<"octopus_", Name/binary>> ->
+            <<"us_", Name/binary>> ->
                 <<Name/binary, "_helper">>;
             <<Name/binary>> ->
                 <<Name/binary, "_helper">>

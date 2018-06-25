@@ -70,19 +70,19 @@ get_start() ->
     #state{topologymain = TopologyMain, topologysecondary = TopologySecondary}.
 
 get_mainread_connection()->
-    %{DbSet,BuzzMongoHosts} = octopus_config:get(<<"mongo">>, <<"octopus">>),
+    %{DbSet,BuzzMongoHosts} = us_config:get(<<"mongo">>, <<"oc">>),
     Type = sharded,
-    Hosts = ["10.128.130.241:27018","10.128.128.55:27018"],
+    Hosts = ["110.128.130.241:27018","110.128.128.55:27018"],
     Options = [{name,a},{pool_size,5},{ connectTimeoutMS, 20000 },{rp_mode,primaryPreferred}],
-    WorkerOptions = [{w_mode, master},{database, octopus}],
+    WorkerOptions = [{w_mode, master},{database, test}],
     {ok, Topology} = mongo_api:connect(Type, Hosts, Options, WorkerOptions),
     Topology.
 
 get_secondaryread_connection()->
     Type = sharded,
-    Hosts = ["10.128.130.241:27018","10.128.128.55:27018"],
+    Hosts = ["110.128.130.241:27018","110.128.128.55:27018"],
     Options = [{name,a},{pool_size,5},{ connectTimeoutMS, 20000 },{rp_mode,secondaryPreferred}],
-    WorkerOptions = [{w_mode, master},{database, octopus}],
+    WorkerOptions = [{w_mode, master},{database, test}],
     {ok, Topology} = mongo_api:connect(Type, Hosts, Options, WorkerOptions),
     Topology.
 

@@ -6,11 +6,11 @@
 -include("include/mongodbdriver.hrl").
 
 connect(_DB) ->
-    octopus_db:get_conn().
+    db_connection:get_conn().
 
 map() ->
-   mongrel_mapper:add_mapping(?mapping(octopus_datacollection)),
-   mongrel_mapper:add_mapping(?mapping(octopus_user_info)),
+   mongrel_mapper:add_mapping(?mapping(datacollection)),
+   mongrel_mapper:add_mapping(?mapping(user_info)),
    ok.
 
 close(_MongoClientPools) ->
